@@ -5,6 +5,7 @@ import './App.css';
 import Navbar from './components/navbar/navbar.js';
 import Showreel from './pages/showreel/showreel.js';
 import About from './pages/about/about.js';
+import Contact from './pages/contact/contact.js';
 
 
 class App extends Component {
@@ -45,6 +46,11 @@ class App extends Component {
           {this.state.currentPage === "About" &&
             <About />
           }
+
+          {this.state.currentPage === "Contact" &&
+            <Contact />
+          }
+
         </div>
       </div>
     );
