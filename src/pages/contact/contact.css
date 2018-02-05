@@ -1,0 +1,9 @@
+.contactWrapper {
+	width: 80%;
+}
+
+.contactWrapper a {
+	text-decoration: underline;
+	padding: 0px;
+	display: inline;
+}
