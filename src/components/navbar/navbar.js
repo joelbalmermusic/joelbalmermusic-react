@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './navbar.css';
 
 class Navbar extends React.Component {
@@ -10,12 +9,10 @@ class Navbar extends React.Component {
 
   render() {
     const menuItemsArray = ["Showreel", "Work", "About", "Contact"];
-    // this.props.onClick('Work');
 
     return (
       <ul>
         {
-          //LOOP THROUGH MENU ITEMS
           menuItemsArray.map(item => {
             return (
               <li>

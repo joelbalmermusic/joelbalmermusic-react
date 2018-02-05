@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Button from './components/button.js';
 import Navbar from './components/navbar/navbar.js';
+import Showreel from './pages/showreel/showreel.js';
 
 
 class App extends Component {
@@ -37,10 +37,7 @@ class App extends Component {
           <h1 className="App-intro">Joel Balmer Music</h1>
           <h2>Freelance composer for TV and film</h2>
           
-          <iframe className="main_video" id="showreelVideo" src="https://player.vimeo.com/video/163051443?api=1&player_id=showreelVideo&color=2AA7A7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-          </iframe>
-
-          <Button text="This is a button!" />
+          <Showreel />
         </div>
       </div>
     );
