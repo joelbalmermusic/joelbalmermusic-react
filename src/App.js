@@ -4,6 +4,7 @@ import './App.css';
 
 import Navbar from './components/navbar/navbar.js';
 import Showreel from './pages/showreel/showreel.js';
+import About from './pages/about/about.js';
 
 
 class App extends Component {
@@ -37,7 +38,13 @@ class App extends Component {
           <h1 className="App-intro">Joel Balmer Music</h1>
           <h2>Freelance composer for TV and film</h2>
           
-          <Showreel />
+          {this.state.currentPage === "Showreel" &&
+            <Showreel />
+          }
+
+          {this.state.currentPage === "About" &&
+            <About />
+          }
         </div>
       </div>
     );
