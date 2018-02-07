@@ -9,8 +9,17 @@ class Showreel extends React.Component {
 
   render() {
   	return (
-  		<iframe className="main_video" id="showreelVideo" src="https://player.vimeo.com/video/163051443?api=1&player_id=showreelVideo&color=2AA7A7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-		</iframe>
+        <div className="showreelWrapper">
+            <ul className="tabs">
+                <li className="tab">Yes</li>
+                <li className="tab">Yes</li>
+                <li className="tab">Yes</li>
+            </ul>
+
+      		<iframe src="https://player.vimeo.com/video/163051443" width="450" height="253" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+            </iframe>
+
+        </div>
 	);
   }
 }
