@@ -20,8 +20,6 @@ class App extends Component {
 
   handleClick(menuItem) {
     this.setState({ currentPage: menuItem });
-
-    //swap out/content
   }
 
   render() {
@@ -39,11 +37,8 @@ class App extends Component {
         <div className="body">
           <h1 className="App-intro">Joel Balmer Music</h1>
           <h2>Freelance composer for TV and film</h2>
-
           {this.state.currentPage === "Showreel" && <Showreel />}
-
           {this.state.currentPage === "About" && <About />}
-
           {this.state.currentPage === "Contact" && <Contact />}
         </div>
       </div>
