@@ -7,76 +7,68 @@ class Showreel extends React.Component {
   }
 
   render() {
+    const tabItemsArray = [
+      {
+        name: "All",
+        videoId: "163051443"
+      },
+      {
+        name: "Film",
+        videoId: "255175167"
+      },
+      {
+        name: "Documentary",
+        videoId: "256244177"
+      },
+      {
+        name: "Commercial",
+        videoId: "259461019"
+      }
+    ];
+
     return (
       <div className="showreelWrapper">
         <ul id="showreel-tabs" className="nav nav-tabs float-left tabs">
-          <li className="active">
-            <a data-toggle="tab" href="#menu1">
-              ALL
-            </a>
-          </li>
-          <li>
-            <a data-toggle="tab" href="#menu2">
-              FILM
-            </a>
-          </li>
-          <li>
-            <a data-toggle="tab" href="#menu3">
-              DOCUMENTARY
-            </a>
-          </li>
-          <li>
-            <a data-toggle="tab" href="#menu4">
-              COMMERCIAL
-            </a>
-          </li>
+          {tabItemsArray.map(item => {
+            return (
+              <li
+                className={
+                  item.name === this.props.currentTab ? "active" : null
+                }
+              >
+                <a onClick={() => this.props.onClick(item.name)}>{item.name}</a>
+              </li>
+            );
+          })}
         </ul>
 
         <div className="tab-content">
-          <div id="menu1" className="videoWrapper tab-pane fade in active">
-            <iframe
-              src="https://player.vimeo.com/video/163051443?color=2AA7A7"
-              width="450"
-              height="253"
-              frameborder="0"
-              webkitallowfullscreen
-              mozallowfullscreen
-              allowfullscreen
-            />
-          </div>
-          <div id="menu2" className="videoWrapper tab-pane fade">
-            <iframe
-              src="https://player.vimeo.com/video/255175167?color=2AA7A7"
-              width="450"
-              height="253"
-              frameborder="0"
-              webkitallowfullscreen
-              mozallowfullscreen
-              allowfullscreen
-            />
-          </div>
-          <div id="menu3" className="videoWrapper tab-pane fade">
-            <iframe
-              src="https://player.vimeo.com/video/256244177?color=2AA7A7"
-              width="450"
-              height="253"
-              frameborder="0"
-              webkitallowfullscreen
-              mozallowfullscreen
-              allowfullscreen
-            />
-          </div>
-          <div id="menu4" className="videoWrapper tab-pane fade">
-            <iframe
-              src="https://player.vimeo.com/video/259461019?color=2AA7A7"
-              width="450"
-              height="253"
-              frameborder="0"
-              webkitallowfullscreen
-              mozallowfullscreen
-              allowfullscreen
-            />
-          </div>
+          {tabItemsArray.map(item => {
+            return (
+              <div
+                className={
+                  "videoWrapper tab-pane fade in" + item.name ===
+                  this.props.currentTab
+                    ? " active"
+                    : null
+                }
+              >
+                <iframe
+                  width="450"
+                  height="253"
+                  frameborder="0"
+                  webkitallowfullscreen
+                  mozallowfullscreen
+                  allowfullscreen
+                  src={
+                    "https://player.vimeo.com/video/" +
+                    item.videoId +
+                    "?color=2AA7A7"
+                  }
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     );

@@ -12,14 +12,20 @@ class App extends Component {
     super(props);
 
     this.state = {
-      currentPage: "Showreel"
+      currentPage: "Showreel",
+      currentTab: "All"
     };
 
     this.handleClick = this.handleClick.bind(this);
+    this.handleTabClick = this.handleClick.bind(this);
   }
 
   handleClick(menuItem) {
     this.setState({ currentPage: menuItem });
+  }
+
+  handleTabClick(tabItem) {
+    this.setState({ currentTab: tabItem });
   }
 
   render() {
@@ -37,7 +43,12 @@ class App extends Component {
         <div className="body">
           <h1 className="App-intro">Joel Balmer Music</h1>
           <h2>Freelance composer for TV and film</h2>
-          {this.state.currentPage === "Showreel" && <Showreel />}
+          {this.state.currentPage === "Showreel" && (
+            <Showreel
+              currentTab={this.state.currentTab}
+              onClick={this.handleTabClick}
+            />
+          )}
           {this.state.currentPage === "About" && <About />}
           {this.state.currentPage === "Contact" && <Contact />}
         </div>
