@@ -17,15 +17,15 @@ class App extends Component {
     };
 
     this.handleClick = this.handleClick.bind(this);
-    this.handleTabClick = this.handleClick.bind(this);
+    this.handleTabClick = this.handleTabClick.bind(this);
   }
 
   handleClick(menuItem) {
     this.setState({ currentPage: menuItem });
   }
 
-  handleTabClick(tabItem) {
-    this.setState({ currentTab: tabItem });
+  handleTabClick(tabItemName) {
+    this.setState({ currentTab: tabItemName });
   }
 
   render() {

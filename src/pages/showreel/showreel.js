@@ -26,6 +26,11 @@ class Showreel extends React.Component {
       }
     ];
 
+    const tabItemsLookup = {};
+    tabItemsArray.forEach(item => {
+      tabItemsLookup[item.name] = item;
+    });
+
     return (
       <div className="showreelWrapper">
         <ul id="showreel-tabs" className="nav nav-tabs float-left tabs">
@@ -43,32 +48,30 @@ class Showreel extends React.Component {
         </ul>
 
         <div className="tab-content">
-          {tabItemsArray.map(item => {
-            return (
-              <div
-                className={
-                  "videoWrapper tab-pane fade in" + item.name ===
-                  this.props.currentTab
-                    ? " active"
-                    : null
-                }
-              >
-                <iframe
-                  width="450"
-                  height="253"
-                  frameborder="0"
-                  webkitallowfullscreen
-                  mozallowfullscreen
-                  allowfullscreen
-                  src={
-                    "https://player.vimeo.com/video/" +
-                    item.videoId +
-                    "?color=2AA7A7"
-                  }
-                />
-              </div>
-            );
-          })}
+          <div
+            className={
+              "videoWrapper tab-pane fade in" +
+                tabItemsLookup[this.props.currentTab].name ===
+              this.props.currentTab
+                ? " active"
+                : null
+            }
+          >
+            <iframe
+              title={tabItemsLookup[this.props.currentTab].name}
+              width="450"
+              height="253"
+              frameborder="0"
+              webkitallowfullscreen
+              mozallowfullscreen
+              allowfullscreen
+              src={
+                "https://player.vimeo.com/video/" +
+                tabItemsLookup[this.props.currentTab].videoId +
+                "?color=2AA7A7"
+              }
+            />
+          </div>
         </div>
       </div>
     );
