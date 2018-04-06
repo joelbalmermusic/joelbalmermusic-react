@@ -50,7 +50,7 @@ class Showreel extends React.Component {
         <div className="tab-content">
           <div
             className={
-              "videoWrapper tab-pane fade in" +
+              "video-wrapper tab-pane fade in" +
                 tabItemsLookup[this.props.currentTab].name ===
               this.props.currentTab
                 ? " active"
@@ -58,9 +58,10 @@ class Showreel extends React.Component {
             }
           >
             <iframe
+              className="vimeo-video"
               title={tabItemsLookup[this.props.currentTab].name}
-              width="450"
-              height="253"
+              height="300px"
+              width="350px"
               frameborder="0"
               webkitallowfullscreen
               mozallowfullscreen

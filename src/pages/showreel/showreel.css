@@ -1,10 +1,19 @@
+.vimeo-video {
+	padding: 0px;
+	width: 70%;
+}
+
 .showreel-wrapper {
 	width: fit-content;
 	padding: 20px;
 }
 
+.video-wrapper {
+	padding: 0px;
+}
+
 #showreel-tabs {
-	width: 40%;
+	width: 60%;
 }
 
 .main_video {
