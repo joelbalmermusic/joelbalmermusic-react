@@ -1,11 +1,12 @@
 .App {
   font-size: 13px;
   font-weight: normal;
-  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   text-align: center;
   background: url(./assets/img/Coastline-small.jpg) no-repeat center left scroll;
   padding-bottom: 60px;
+  overflow: hidden;
 }
 
 .body * {
@@ -21,7 +22,6 @@ h1 {
 
 h2 {
   padding-bottom: 20px;
-
 }
 
 a {
@@ -46,11 +46,11 @@ a {
   cursor: pointer;
 }
 
-a:hover { 
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    color: #2AA7A7;
+a:hover {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #2aa7a7;
 }
 
 .menu {
@@ -76,6 +76,10 @@ a:hover {
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

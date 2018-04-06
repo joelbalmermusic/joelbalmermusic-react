@@ -32,8 +32,8 @@ class Showreel extends React.Component {
     });
 
     return (
-      <div className="showreelWrapper">
-        <ul id="showreel-tabs" className="nav nav-tabs float-left tabs">
+      <div className="showreel-wrapper">
+        <ul id="showreel-tabs" className="nav nav-tabs tabs nav-justified">
           {tabItemsArray.map(item => {
             return (
               <li

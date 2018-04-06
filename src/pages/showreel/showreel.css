@@ -1,7 +1,10 @@
-.showreelWrapper {
+.showreel-wrapper {
 	width: fit-content;
-	border: 1px solid black;
 	padding: 20px;
+}
+
+#showreel-tabs {
+	width: 40%;
 }
 
 .main_video {
