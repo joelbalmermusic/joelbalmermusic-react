@@ -60,8 +60,8 @@ class Showreel extends React.Component {
             <iframe
               className="vimeo-video"
               title={tabItemsLookup[this.props.currentTab].name}
-              height="300px"
-              width="350px"
+              height="250px"
+              width="500px"
               frameborder="0"
               webkitallowfullscreen
               mozallowfullscreen

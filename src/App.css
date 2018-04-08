@@ -15,9 +15,12 @@
   height: 2000px;
 }
 
+.body {
+  margin-top: 20px;
+}
+
 .body * {
-  padding-top: 20px;
-  margin: 0 auto;
+  margin: 0px auto;
   text-align: center;
   display: block;
 }
