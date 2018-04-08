@@ -26,11 +26,12 @@
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 25px;
 }
 
-h2 {
-  padding-bottom: 20px;
+h3 {
+  padding: 20px;
+  font-size: 15px;
 }
 
 a {

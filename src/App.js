@@ -42,7 +42,7 @@ class App extends Component {
 
         <div className="body">
           <h1 className="App-intro">Joel Balmer Music</h1>
-          <h2>Freelance composer for TV and film</h2>
+          <h3>Freelance composer for TV and film</h3>
           {this.state.currentPage === "Showreel" && (
             <Showreel
               currentTab={this.state.currentTab}
