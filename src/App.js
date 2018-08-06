@@ -6,22 +6,17 @@ import Navbar from "./components/navbar/navbar.js";
 import Showreel from "./pages/showreel/showreel.js";
 import About from "./pages/about/about.js";
 import Contact from "./pages/contact/contact.js";
+import { Switch, Route } from "../node_modules/react-router-dom";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      currentPage: "Showreel",
       currentTab: "All"
     };
 
-    this.handleClick = this.handleClick.bind(this);
     this.handleTabClick = this.handleTabClick.bind(this);
-  }
-
-  handleClick(menuItem) {
-    this.setState({ currentPage: menuItem });
   }
 
   handleTabClick(tabItemName) {
@@ -33,24 +28,26 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <div className="menu">
-            <Navbar
-              onClick={this.handleClick}
-              currentPage={this.state.currentPage}
-            />
+            <Navbar onClick={this.handleClick} />
           </div>
         </header>
 
         <div className="body">
           <h1 className="App-intro">Joel Balmer Music</h1>
           <h3>Freelance composer for TV and film</h3>
-          {this.state.currentPage === "Showreel" && (
-            <Showreel
-              currentTab={this.state.currentTab}
-              onClick={this.handleTabClick}
+          <Switch>
+            <Route
+              path="/Showreel"
+              render={props => (
+                <Showreel
+                  currentTab={this.state.currentTab}
+                  onClick={this.handleTabClick}
+                />
+              )}
             />
-          )}
-          {this.state.currentPage === "About" && <About />}
-          {this.state.currentPage === "Contact" && <Contact />}
+            <Route path="/About" component={About} />
+            <Route path="/Contact" component={Contact} />
+          </Switch>
         </div>
       </div>
     );

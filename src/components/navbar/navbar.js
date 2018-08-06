@@ -1,5 +1,6 @@
 import React from "react";
 import "./navbar.css";
+import { Link } from "../../../node_modules/react-router-dom";
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -14,12 +15,13 @@ class Navbar extends React.Component {
         {menuItemsArray.map(item => {
           return (
             <li>
-              <a
+              {/* <a
                 className={item === this.props.currentPage ? "selected" : null}
                 onClick={() => this.props.onClick(item)}
               >
                 {item}
-              </a>
+              </a> */}
+              <Link to={"/" + item}>{item}</Link>
             </li>
           );
         })}
