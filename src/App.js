@@ -36,6 +36,8 @@ class App extends Component {
           <h1 className="App-intro">Joel Balmer Music</h1>
           <h3>Freelance composer for TV and film</h3>
           <Switch>
+            <Route path="/About" component={About} />
+            <Route path="/Contact" component={Contact} />
             <Route
               path="/Showreel"
               render={props => (
@@ -45,8 +47,6 @@ class App extends Component {
                 />
               )}
             />
-            <Route path="/About" component={About} />
-            <Route path="/Contact" component={Contact} />
           </Switch>
         </div>
       </div>
