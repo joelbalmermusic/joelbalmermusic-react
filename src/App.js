@@ -47,6 +47,15 @@ class App extends Component {
                 />
               )}
             />
+            <Route
+              path="/"
+              render={props => (
+                <Showreel
+                  currentTab={this.state.currentTab}
+                  onClick={this.handleTabClick}
+                />
+              )}
+            />
           </Switch>
         </div>
       </div>
